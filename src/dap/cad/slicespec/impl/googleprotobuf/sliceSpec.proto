@@ -1,0 +1,41 @@
+package dap.cad.slicespec.impl.googleprotobuf;
+
+
+message Slice {
+  required int32 sliceID = 1; 	//unique identifier for each slice provider
+  optional string topology = 2; // type of topology (e.g. "linear" or "star")
+  optional string name = 3;		// name assigned to the slice (for filtering or in case there are multiple slice providers) 
+  
+  
+  message vNode {   
+    required int32 vNodeId = 1;						// node identifier
+    optional int32 vNodeCapacity = 2; 				// CPU capacity
+    optional int32 vNodeType = 3;					// additional constraint example: small, medium, large
+    optional string vNodeClass = 4;					// node class description (e.g. to create a virtual node object model)
+    optional string vNodeName = 5;					// node name (e.g. owner) 
+    extensions 6 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications    
+  }
+  
+  repeated vNode virtualnode = 4;	   				// virtual node constraints 
+  
+  message vLink {
+    required int32 vLinkId = 1;						// virtual link identifier
+    required int32 vSrcID = 2;						// virtual node source identifier
+    required int32 vDstID = 3;						// virtual node destination identifier
+    optional int32 vLinkCapacity = 4 [default = 1];	// virtual link capacity requested
+    optional int32 vLinkType = 5 [default = 1];		// can be used as additional constraint example: (1:small, 2:medium, 3:large or delay [ms]
+    extensions 6 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications
+  }
+
+  repeated vLink virtuallink = 5;       			// virtual link constraints 
+
+  optional int64 entryTime = 6;       				// time at which the slice is needed 
+  optional int64 exitTime = 7;       				// time at which the slice is needed
+  
+  optional int64 version = 8;						// For application use - sliceSpec version.
+
+  repeated string policy = 9;						// list here the policies of this requested slice
+  extensions 10 to max;								//19000 though 19999 are reserved to Google Communications
+  
+  
+} //end of sliceSpec

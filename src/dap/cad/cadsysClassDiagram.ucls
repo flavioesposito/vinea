@@ -1,0 +1,34 @@
+<class-diagram version="1.0.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" corner="BOTTOM_RIGHT" language="java" name="dap.cad.pnode" project="cadsys" 
+    file="/cadsys/src/dap/cad/pnode" binary="false">    
+    <position height="-1" width="-1" x="80" y="38"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="2" corner="BOTTOM_RIGHT" language="java" name="dap.cad.config" project="cadsys" 
+    file="/cadsys/src/dap/cad/config" binary="false">    
+    <position height="-1" width="-1" x="82" y="104"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="3" corner="BOTTOM_RIGHT" language="java" name="dap.cad.emulation" project="cadsys" 
+    file="/cadsys/src/dap/cad/emulation" binary="false">    
+    <position height="49" width="151" x="19" y="146"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="4" corner="BOTTOM_RIGHT" language="java" name="dap.cad.sp" project="cadsys" file="/cadsys/src/dap/cad/sp" 
+    binary="false">    
+    <position height="-1" width="-1" x="278" y="40"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="5" corner="BOTTOM_RIGHT" language="java" name="dap.cad.message.api" project="cadsys" 
+    file="/cadsys/src/dap/cad/message/api" binary="false">    
+    <position height="-1" width="-1" x="282" y="98"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

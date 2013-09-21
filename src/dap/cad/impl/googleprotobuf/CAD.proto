@@ -1,0 +1,83 @@
+package dap.cad.impl.googleprotobuf;
+
+
+message CADMessage {
+  required int32 sliceID = 1; 						//unique slice identifier for each "sliceproviderName.sliceID" must be unique 
+  optional string allocationPolicy = 2;				// e.g., SAD, MAD or specify your own policy here 
+  
+  message assignment {
+    required int32 vNodeId = 1;						// virtual node identifier
+	optional string hostingPnodeName = 2; 				// w_ij: identity of hosting physical node : used only when the assignment vector policy is set to "most informative", e.g. in MAD 
+	optional bool assigned = 3; 					// x_ij: weather this vnode is assigned to some physical node or not. Used when the assignment vector policy is set to "least informative", e.g. in SAD
+    extensions 4 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications        
+  }
+ 
+  message bid {   
+    required int32 vNodeId = 1;						// virtual node identifier
+    optional double bidValue = 2; 					// bid on virtual node
+    extensions 3 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications    
+  }
+  
+  
+   message bidTime {   
+    required int32 vNodeId = 1;						// virtual node identifier
+    optional int64 time = 2; 					// bid on virtual node
+    extensions 3 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications    
+  }
+  
+  repeated assignment a = 3;	   					// assignment on virtual node
+  
+  repeated bid b = 4;	   							// bid on virtual node 
+    
+  repeated int32 m = 5; 							// bundle element (list of virtual node identifiers)
+     
+  repeated bidTime timeStamp = 6;       				// time at which the bid was generated: useful for the conflict resolution (consensus) phase of the protocol
+  
+  optional int64 version = 7;						// For application use - CAD protocol version.
+
+  //Slice 
+  
+  message Slice {
+   required int32 sliceID = 1; 	//unique identifier for each slice provider
+   optional string topology = 2; // type of topology (e.g. "linear" or "star")
+   optional string name = 3;		// name assigned to the slice (for filtering or in case there are multiple slice providers) 
+  
+  
+   message vNode {   
+     required int32 vNodeId = 1;						// node identifier
+     optional int32 vNodeCapacity = 2; 				// CPU capacity
+     optional int32 vNodeType = 3;					// additional constraint example: small, medium, large
+     optional string vNodeClass = 4;					// node class description (e.g. to create a virtual node object model)
+     optional string vNodeName = 5;					// node name (e.g. owner) 
+     extensions 6 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications    
+   }
+  
+   repeated vNode virtualnode = 4;	   				// virtual node constraints 
+  
+   message vLink {
+     required int32 vLinkId = 1;						// virtual link identifier
+     required int32 vSrcID = 2;						// virtual node source identifier
+     required int32 vDstID = 3;						// virtual node destination identifier
+     optional int32 vLinkCapacity = 4 [default = 1];	// virtual link capacity requested
+     optional int32 vLinkType = 5 [default = 1];		// can be used as additional constraint example: (1:small, 2:medium, 3:large or delay [ms]
+     extensions 6 to max; 							// extend the protocol here avoiding 19000 though 19999 that are reserved to Google Communications
+   }
+
+   repeated vLink virtuallink = 5;       			// virtual link constraints 
+
+   optional int64 entryTime = 6;       				// time at which the slice is needed 
+   optional int64 exitTime = 7;       				// time at which the slice is needed
+  
+   optional int64 version = 8;						// For application use - sliceSpec version.
+   extensions 9 to max;								//19000 though 19999 are reserved to Google Communications
+  
+  
+ } //end of sliceSpec
+  
+  
+ optional Slice sliceRequest = 8;				// slice requested to piggyback with the first bid message 
+  
+ extensions 9 to max;								//19000 though 19999 are reserved to Google Communications
+  
+  
+} //end of CAD
