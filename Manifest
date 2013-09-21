@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+main-class: rina.gui.RINAGUI
+idd-class: vinea.fork.ForkISD
+dns-class: vinea.fork.ForkDNS
