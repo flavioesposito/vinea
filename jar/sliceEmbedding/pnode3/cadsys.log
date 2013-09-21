@@ -1,0 +1,336 @@
+0    INFO   Forking Pnode pnode3...
+2    INFO   RINAConfig: configuration file: pnode3.properties loaded
+7    INFO   RINAConfig: IPCName: pnode3
+7    INFO   RINAConfig: The name of the DIF that is going to join  is: DIF1
+7    INFO   RINAConfig: User name is: BU
+7    INFO   RINAConfig: Pass word is: BU
+8    INFO   RINAConfig: IDD name is: idd
+9    INFO   RINAConfig: DNSName: localhost
+9    INFO   RINAConfig: DNSPort: 21111
+9    INFO   RINAConfig: TCPPort: 21113
+42   INFO   TCPFlowManager: Registration to DNS finished
+5045 INFO   RINAConfig: name of neihbour 1 is idd
+5052 INFO   TCPFlowManager: DNS Query of idd finished
+5058 INFO   TCPFlowManager: New TCP Flow is added: idd
+5059 INFO   RINAConfig: name of neihbour 2 is InPManagerIPC
+5060 INFO   TCPFlowManager: DNS Query of InPManagerIPC finished
+5061 INFO   TCPFlowManager: New TCP Flow is added: InPManagerIPC
+5061 INFO   IPC Process pnode3 : init Connection done
+5076 INFO   TCPFlowManager: flow allocated before.
+5077 INFO   IPC Process pnode3 of DIF DIF1: M_READ to IDD sent
+5077 INFO   IPC Process pnode3 of DIF DIF1 has state: WAIT_FOR_IDD_LOOKUP
+5079 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is idd and objclass is IDDEntry, objName is bu
+5079 INFO   IPC Process pnode3 of DIF DIF1: IDD M_READ_R(OK) received
+5091 INFO   IPC Process pnode3 of DIF DIF1: NMS of the dst DIF is InPManagerIPC
+5091 INFO   IPC Process pnode3 of DIF DIF1: new flow allocated for NMS: InPManagerIPC
+5094 INFO   TCPFlowManager: flow allocated before.
+5094 INFO   IPC Process pnode3 of DIF DIF1: M_START to NMS sent
+5095 INFO   IPC Process State: WAIT_TO_JOIN_DIF
+5097 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_START_R and src is InPManagerIPC and objclass is enrollment information, objName is /daf/management/enrollment
+5098 INFO   IPC Process pnode3 of DIF DIF1: NMS M_START_R(OK) received
+5098 INFO   IPC Process State: JOINING_DIF
+5099 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_CREATE and src is InPManagerIPC and objclass is DIFMemberList, objName is DIFMemberList
+5099 INFO   IPC Process pnode3 of DIF DIF1: M_CREATE received
+5106 INFO   IPC Process pnode3 of DIF DIF1: Current memberList is [InPManagerIPC, pnode1, pnode2, pnode3]
+5106 INFO   TCPFlowManager: flow allocated before.
+5106 INFO   IPC Process pnode3 of DIF DIF1: M_CREATE_R(OK) to NMS InPManagerIPC sent
+5107 INFO   IPC Process State: WAIT_FOR_START
+5110 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_STOP and src is InPManagerIPC and objclass is enrollment information, objName is /daf/management/enrollment
+5110 INFO   IPC Process pnode3 of DIF DIF1: M_STOP received
+5111 INFO   TCPFlowManager: flow allocated before.
+5111 INFO   IPC Process pnode3 of DIF DIF1: M_STOP_R(Enrollment) to NMS InPManagerIPC sent
+5111 INFO   IPC Process pnode3 of DIF DIF1 has state: DIF_JOINED
+5111 INFO   IPC Process pnode3 of DIF DIF1: Enrollment phase complete
+5111 INFO   RINAConfig: IDD name is: idd
+5117 INFO   RIBDaemon(pnode3): sub name is appsReachable, frequency is 2
+5119 INFO   RIBDaemon(pnode3): sub name is neighbour, frequency is 2
+5119 INFO   TCPFlowManager: flow allocated before.
+5123 INFO   SubHandler(pnode3):  M_READ(PubSub/appsReachable) to NMS sent
+5126 INFO   CADConfig: configuration file: pnode3.properties loaded
+5130 INFO   TCPFlowManager: flow allocated before.
+5130 INFO   IPC Process pnode3 of DIFDIF1: M_CREATE registerApp pnode3 sent to NMS, and NMS name is InPManagerIPC
+5131 INFO   Flow Allocator: allocate flow to IDD for pnode3
+5132 INFO   Flow Allocator:  portID is 5538 for IDD, and app Name is pnode3
+5133 INFO   IRM: get a handle to IDD, and it is 3656
+5133 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+5134 INFO   RIBDaemon(pnode3): opcode is M_READ objClass is PubSub received from InPManagerIPC
+5135 INFO   RIBDaemon(pnode3)subscribe request received from  InPManagerIPC and it is for appStatus with frequency 7
+5135 WARN   RIBDaemon(pnode3): subscriber(InPManagerIPC) to  appStatus#7failed, the sub event does not exist
+7102 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+7103 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+7103 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+9105 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+9106 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+9106 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+11108 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+11108 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+11109 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+13112 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+13112 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+13113 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+15115 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+15115 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+15115 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+17117 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+17118 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+17118 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+19120 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+19121 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+19121 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+21123 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+21124 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+21124 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+23126 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+23127 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+23127 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+25129 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+25129 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+25129 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+27133 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+27133 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+27133 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+28735 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_WRITE and src is InPManagerIPC and objclass is DIFMemberList, objName is DIFMemberList
+28736 INFO   IPC Process pnode3 of DIFDIF1: Current memberList is [InPManagerIPC, pnode1, pnode2, pnode3, sp]
+28736 INFO   TCPFlowManager: flow allocated before.
+28736 INFO   IPC Process pnode3 of DIF DIF1: M_WRITE_R(OK) to NMS InPManagerIPC sent
+28737 INFO   IPC Process: new member has joined DIF DIF1 and the current member are [InPManagerIPC, pnode1, pnode2, pnode3, sp]
+29137 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+29138 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+29138 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+31139 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+31139 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+31139 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+33143 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+33145 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+33145 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+35145 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+35146 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+35146 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+37150 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+37151 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+37152 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+39153 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+39154 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+39154 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+41156 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+41157 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+41157 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+43161 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+43162 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+43162 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+45164 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+45165 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+45165 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+47168 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+47168 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+47168 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+49170 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+49170 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+49170 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+51173 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+51174 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+51174 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+53176 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+53177 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+53177 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+55180 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+55181 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+55181 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+57183 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+57184 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+57184 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+59188 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+59189 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+59189 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+61193 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+61193 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+61193 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+63193 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+63194 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+63194 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+65197 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+65197 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+65198 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+67200 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+67201 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+67201 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+69204 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+69205 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+69205 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+71207 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+71208 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+71208 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+73210 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+73210 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+73211 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+75215 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+75215 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+75215 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+77217 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+77218 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+77218 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+79223 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+79223 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+79223 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+81225 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+81225 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+81225 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+83228 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+83228 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+83228 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+85230 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+85231 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+85231 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+87234 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+87235 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+87235 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+89238 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+89238 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+89239 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+91241 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+91242 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+91242 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+93245 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+93246 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+93246 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+95247 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+95248 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+95248 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+97251 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+97251 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+97251 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+99253 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+99254 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+99254 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+101257 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+101258 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+101258 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+103261 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+103262 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+103262 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+105265 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+105265 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+105265 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+107267 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+107268 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+107268 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+109271 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+109271 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+109271 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+111274 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+111274 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+111274 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+113276 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+113277 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+113277 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+115281 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+115281 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+115282 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+117283 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+117284 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+117284 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+119287 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+119287 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+119288 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+121291 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+121291 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+121291 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+123294 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+123294 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+123295 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+125297 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+125297 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+125298 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+127300 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+127301 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+127301 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+129306 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+129306 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+129307 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+131308 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+131309 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+131309 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+133311 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+133312 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+133312 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+135314 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+135314 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+135314 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+137318 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+137318 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+137318 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+139320 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+139321 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+139321 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+141326 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+141326 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+141326 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+143327 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+143328 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+143328 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+145331 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+145331 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+145331 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+147332 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+147333 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+147333 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+149406 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+149406 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+149406 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+151409 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+151409 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+151409 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+153411 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+153412 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+153412 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+155414 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+155446 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+155447 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+157419 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+157419 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+157419 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+159422 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+159422 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+159422 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+161424 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+161424 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+161425 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+163426 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+163427 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+163427 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+165430 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+165431 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+165431 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+167433 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+167433 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+167434 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+169436 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+169437 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+169437 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+172062 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+172062 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+172062 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+174064 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+174065 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+174065 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+176068 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+176068 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+176068 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+178072 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+178072 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+178072 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+180073 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+180073 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+180074 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+182077 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+182077 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+182078 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+184080 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+184080 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+184080 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+186146 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+186146 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+186146 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+188156 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+188157 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+188157 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
