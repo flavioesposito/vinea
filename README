@@ -1,0 +1,66 @@
+VINEA v1.0 README
+Updated Sept 21, 2013 by Flavio Esposito
+
+All feedback appreciated to flavio@cs.bu.edu
+ 
+
+@copyright 2013 Computer Science Department laboratory, Boston University.  
+=================
+All rights reserved. Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both the copyright notice and this permission notice appear in supporting documentation. The laboratory of the Computer Science Department at Boston University makes no representations about the suitability of this software for any purpose.
+
+
+What is VINEA
+================
+VINEA is the system implementation of our Policy-based, Virtual Network Embedding Architecture, that use an asynchrnous implementation of the  protocol for Consensus-based Distributed virtual network Embedding (CADE). Details of the CADE protocol (formerly called CAD) can be found at http://csr.bu.edu/cad
+
+DISTRIBUTION
+================
+The distribution tree contains: 
+
+README.TXT
+	--this file
+build.xml
+	--used by ant
+Manifest
+	--for generating jar file
+log4j.properties
+	--used for VINEA.log file options
+src/ 
+	--source files
+config/	
+	--configuration files (including events.txt)
+javadoc/
+	--java api reference
+classes/
+	--compiled code
+jar/
+	--jar files to run with >java -jar file.jar
+
+
+
+COMPILATION AND RUN
+============
+Compiling this package requires Ant and Java 1.5. These can be downloaded respectively from:  
+http://jakarta.apache.org/ant/index.html 
+http://java.sun.com/j2se/
+
+- compile
+     ant 
+- start dns
+     ant dns 
+- start isd
+     ant isd 
+- start service provider
+     ant sp
+- make jar file for command line running
+     ant jarcmd
+- make jar file for gui running
+     ant jargui
+
+     
+CONFIGURATION
+============
+pnode.properties -- configuration for each physical node
+events.txt -- events configuration
+
+
