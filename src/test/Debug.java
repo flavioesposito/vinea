@@ -4,9 +4,9 @@
 package test;
 
 import rina.rib.impl.RIBImpl;
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec.Slice.Builder;
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec.Slice.vLink;
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec.Slice.vNode;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec.Slice.Builder;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec.Slice.vLink;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec.Slice.vNode;
 
 /**
  * @author Flavio Esposito

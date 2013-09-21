@@ -3,7 +3,7 @@
  */
 package test.testSE;
 
-import dap.cad.sp.SliceProvider;
+import vinea.sp.SliceProvider;
 
 /**
  * @author flavio

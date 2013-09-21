@@ -1,6 +1,6 @@
 package test;
 
-import dap.cad.pnode.util.GenGraph;
+import vinea.pnode.util.GenGraph;
 
 public class testRandGRaph {
 

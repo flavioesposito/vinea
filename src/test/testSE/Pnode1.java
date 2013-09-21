@@ -7,14 +7,14 @@ import java.util.List;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec;
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec.Slice;
-import dap.cad.slicespec.impl.googleprotobuf.SliceSpec.Slice.vNode;
 
 import rina.cdap.impl.googleprotobuf.CDAP;
 import rina.config.RINAConfig;
 import rina.dap.Application;
 import rina.ipcProcess.impl.IPCProcessImpl;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec.Slice;
+import vinea.slicespec.impl.googleprotobuf.SliceSpec.Slice.vNode;
 
 
 public class Pnode1 extends Application{

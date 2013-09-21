@@ -8,10 +8,10 @@ import java.util.LinkedList;
 
 import com.google.protobuf.ByteString;
 
-import dap.cad.impl.googleprotobuf.CAD;
-import dap.cad.message.impl.CADMessageImpl;
 import rina.cdap.impl.googleprotobuf.CDAP;
 import rina.dap.Application;
+import vinea.impl.googleprotobuf.CAD;
+import vinea.message.impl.CADMessageImpl;
 
 /**
  * @author Flavio Esposito

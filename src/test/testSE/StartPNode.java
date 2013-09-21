@@ -5,9 +5,9 @@ package test.testSE;
 
 import java.util.LinkedList;
 
-import dap.cad.pnode.*;
 import rina.config.RINAConfig;
 import rina.ipcProcess.impl.IPCProcessImpl;
+import vinea.pnode.*;
 
 /**
  * @author flavioesposito
