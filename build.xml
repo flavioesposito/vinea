@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!-- 
+  @copyright 2013 Computer Science Department laboratory, Boston University.
+  All rights reserved. Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both the copyright notice and this permission notice appear in supporting documentation. The laboratory of the Computer Science Department at Boston University makes no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
+  
+  @author Flavio Esposito. Computer Science Department, Boston University
+-->
+
+<project name="cadsys" default="compile" basedir=".">
+
+    <description>
+        The build file is used to compile the CADSys project. See instructions in the README.TXT file
+    </description>
+
+    <!-- set global properties for this build -->
+    <property name="src" location="./src"/>
+    <property name="build" location="classes"/>
+    <property name="doc" location="javadoc" />
+    <property name="jar.dir" location="jar" />
+    <property name="args" value="" />
+    <property name="lib.dir" value="lib" />
+    <property name="isd.dir" value="idd" />
+	<property name="dns.dir" value="dns" />
+    <property name="nms.dir" value="sliceEmbedding/sliceManager" />
+	
+
+    <property name="main-class"  value="vinea.gui.CADSYSGUI"/>
+	<property name="isd-class"  value="dap.demo.ForkISD"/>
+	<property name="dns-class"  value="dap.demo.ForkDNS"/>
+	
+
+    <path id="classpath">
+	        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+	
+	
+	
+
+    <!-- creates directories for this build -->
+    <target name="init">
+        <mkdir dir="${build}" />
+        <mkdir dir="${doc}" />
+    </target>
+
+
+
+    <target name="clean">
+	<delete dir="${build}"/>
+        <echo> Class files deleted</echo>	
+    </target>
+		
+		
+
+   <target name="compile" depends="init">
+        <javac srcdir="${src}" classpath="" destdir="${build}" verbose="off" debug="on" optimize="true" classpathref="classpath"/>	    
+        <copy todir="${build}">
+            <fileset dir="${src}" excludes="**/*.java"/>
+        </copy>
+    </target>
+	
+	
+
+	<!-- ISD -->
+    <target name="isd" depends="init, compile">
+        <java classname="vinea.fork.ForkISD" classpath="${build}" fork="true" classpathref="classpath"  />
+    </target>
+	
+	
+	
+	
+    <target name="jarisd" depends="init, compile">
+	    	 <echo> /jar/idd directory created</echo>	
+	    	 <mkdir dir="${jar.dir}/${idd.dir}" />
+	    	<jar jarfile="${jar.dir}/${idd.dir}/isd.jar" basedir="${build}"
+	            includes="rina/**/*.class">
+	            <manifest>
+	                <attribute name="${idd-class}"
+	                    value="vinea.fork.ForkISD" />
+	            </manifest>
+	        </jar>
+    	<echo> /jar/idd/idd.jar created</echo>	
+	</target>
+	
+	
+    <!--InPManager -->
+    <target name="nms" depends="init, compile">
+        <java classname="vinea.fork.ForkInPManager" classpath="${build}" fork="true" classpathref="classpath"  />
+    </target>
+    
+
+	
+	<!-- DNS -->
+	<target name="dns" depends="init, compile">
+	        <java classname="vinea.fork.ForkDNS" classpath="${build}" fork="true" classpathref="classpath"  />
+	</target>
+    
+    
+    <!-- create a jar file for dns -->
+    <target name="jardns" depends="init, compile">
+        <echo> /jar/dns directory created</echo>
+        <mkdir dir="${jar.dir}/${idd.dir}" />
+        <jar jarfile="${jar.dir}/${dns.dir}/ForkDNS.jar" basedir="${build}"
+            includes="rina/**/*.class">
+            <manifest>
+                <attribute name="${dns-class}"
+                value="vinea.fork.ForkDNS" />
+            </manifest>
+        </jar>
+    	<echo> /jar/dns/dns.jar created</echo>
+        
+    </target>
+	
+	
+	
+    <!-- pnode -->
+    <target name="pnode" depends="init, compile">
+        <echo> starting pnode...</echo>
+        <java classname="vinea.fork.ForkPnode" classpath="${build}" fork="true" classpathref="classpath"  />
+        <!--  <jvmarg value="pnode.properties"/> -->
+    </target>
+    
+    
+    <!-- Service Provider: start emulation from file -->
+    <target name="sp" depends="init, compile">
+        <echo> starting service provider emulation...</echo>
+        <java classname="vinea.main.StartEmulation" classpath="${build}" fork="true" classpathref="classpath"  />
+    </target>
+	
+ 
+
+
+	
+	
+	
+<!-- GUI -->
+     <target name="gui" depends="jargui">
+        <java fork="true" classname="${main-class}">
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${jar.dir}/RINAgui.jar"/>
+            </classpath>
+       </java>
+	</target>
+
+    <target name="jargui" depends="init, compile">
+        <jar jarfile="${jar.dir}/RINAgui.jar" basedir="${build}"
+            includes="rina/**/*.class">
+            <manifest>
+                <attribute name="${main-class}"
+                    value="rina.gui.RINAGUI" />
+            </manifest>
+        </jar>
+    </target>
+
+
+
+	
+ 
+
+
+    <target name="jarcmd" depends="init, compile">
+        <jar jarfile="rinacmd.jar" basedir="${build}"
+            includes="rina/**/*.class">
+            <manifest>
+                <attribute name="${main-class}"
+                    value="rina.generator.Generator" />
+            </manifest>
+        </jar>
+    </target>
+
+
+
+
+
+
+
+
+
+     <target name="docgen16" depends="init, compile">
+        <java classname="gps.toolbox.DocGen4BT" classpath="${build}" fork="true">
+           <arg line="4  500000  8  1  123456  'config/documents-16.txt'"/>
+        </java>
+    </target>
+
+   
+    
+                 <target name="post1054" depends="init, compile">
+        <java classname="gps.toolbox.PostProcess" classpath="${build}" fork="true">
+           <arg line="'output/Trace050720202113.log'"/>
+        </java>
+    </target>
+
+    
+    
+
+   <target name="javadoc" depends="init">
+        <javadoc packagenames="*.*"
+           sourcepath="${src}"
+           destdir="${doc}"
+           classpath="${build}"
+           author="true"
+           Private="No"
+           version="true"
+           use="true"
+           windowtitle="RINA Prototype 1.0">
+           <doctitle><![CDATA[RINA Prototype]]></doctitle>
+           <bottom><![CDATA[<i>Copyright &#169; 2012 Computer Science Department, Recursive InterNetworking Architecture (RINA) laboratory, Boston University.</i>]]></bottom>
+        </javadoc>
+    </target>
+
+
+
+
+ <target name="clean-build" depends="clean,jargui"/>
+ <target name="main" depends="clean,gui"/>
+
+</project>
+
+    
+<!-- IDD 
+    <target name="idd" depends="jaridd">
+            <java fork="true" classname="${idd-class}">
+                <classpath>
+                    <path refid="classpath"/>
+                    <path location="${jar.dir}/${idd.dir}/idd.jar"/>
+                </classpath>
+           </java>
+    </target>
+-->
