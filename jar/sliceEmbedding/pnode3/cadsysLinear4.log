@@ -1,0 +1,654 @@
+0    INFO   Forking Pnode pnode3...
+50   INFO   RINAConfig: configuration file: pnode3.properties loaded
+97   INFO   RINAConfig: IPCName: pnode3
+98   INFO   RINAConfig: The name of the DIF that is going to join  is: DIF1
+98   INFO   RINAConfig: User name is: BU
+98   INFO   RINAConfig: Pass word is: BU
+98   INFO   RINAConfig: IDD name is: idd
+100  INFO   RINAConfig: DNSName: localhost
+100  INFO   RINAConfig: DNSPort: 21111
+100  INFO   RINAConfig: TCPPort: 21113
+186  INFO   TCPFlowManager: Registration to DNS finished
+5195 INFO   RINAConfig: name of neihbour 1 is idd
+5196 INFO   TCPFlowManager: DNS Query of idd finished
+5309 INFO   TCPFlowManager: New TCP Flow is added: idd
+5310 INFO   RINAConfig: name of neihbour 2 is InPManagerIPC
+5312 INFO   TCPFlowManager: DNS Query of InPManagerIPC finished
+5312 INFO   TCPFlowManager: New TCP Flow is added: InPManagerIPC
+5313 INFO   IPC Process pnode3 : init Connection done
+5841 INFO   TCPFlowManager: flow allocated before.
+5842 INFO   IPC Process pnode3 of DIF DIF1: M_READ to IDD sent
+5842 INFO   IPC Process pnode3 of DIF DIF1 has state: WAIT_FOR_IDD_LOOKUP
+5844 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is idd and objclass is IDDEntry, objName is bu
+5844 INFO   IPC Process pnode3 of DIF DIF1: IDD M_READ_R(OK) received
+6218 INFO   IPC Process pnode3 of DIF DIF1: NMS of the dst DIF is InPManagerIPC
+6218 INFO   IPC Process pnode3 of DIF DIF1: new flow allocated for NMS: InPManagerIPC
+6271 INFO   TCPFlowManager: flow allocated before.
+6272 INFO   IPC Process pnode3 of DIF DIF1: M_START to NMS sent
+6272 INFO   IPC Process State: WAIT_TO_JOIN_DIF
+6274 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_START_R and src is InPManagerIPC and objclass is enrollment information, objName is /daf/management/enrollment
+6274 INFO   IPC Process pnode3 of DIF DIF1: NMS M_START_R(OK) received
+6275 INFO   IPC Process State: JOINING_DIF
+6275 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_CREATE and src is InPManagerIPC and objclass is DIFMemberList, objName is DIFMemberList
+6275 INFO   IPC Process pnode3 of DIF DIF1: M_CREATE received
+6282 INFO   IPC Process pnode3 of DIF DIF1: Current memberList is [InPManagerIPC, pnode1, pnode3]
+6283 INFO   TCPFlowManager: flow allocated before.
+6283 INFO   IPC Process pnode3 of DIF DIF1: M_CREATE_R(OK) to NMS InPManagerIPC sent
+6283 INFO   IPC Process State: WAIT_FOR_START
+6289 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_STOP and src is InPManagerIPC and objclass is enrollment information, objName is /daf/management/enrollment
+6289 INFO   IPC Process pnode3 of DIF DIF1: M_STOP received
+6289 INFO   TCPFlowManager: flow allocated before.
+6290 INFO   IPC Process pnode3 of DIF DIF1: M_STOP_R(Enrollment) to NMS InPManagerIPC sent
+6290 INFO   IPC Process pnode3 of DIF DIF1 has state: DIF_JOINED
+6290 INFO   IPC Process pnode3 of DIF DIF1: Enrollment phase complete
+6291 INFO   RINAConfig: IDD name is: idd
+6424 INFO   RIBDaemon(pnode3): sub name is appsReachable, frequency is 2
+6427 INFO   RIBDaemon(pnode3): sub name is neighbour, frequency is 2
+6429 INFO   TCPFlowManager: flow allocated before.
+6430 INFO   SubHandler(pnode3):  M_READ(PubSub/appsReachable) to NMS sent
+6433 INFO   CADConfig: configuration file: pnode3.properties loaded
+6460 INFO   TCPFlowManager: flow allocated before.
+6461 INFO   IPC Process pnode3 of DIFDIF1: M_CREATE registerApp pnode3 sent to NMS, and NMS name is InPManagerIPC
+6461 INFO   Flow Allocator: allocate flow to IDD for pnode3
+6462 INFO   Flow Allocator:  portID is 4198 for IDD, and app Name is pnode3
+6463 INFO   IRM: get a handle to IDD, and it is 8195
+6464 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+6464 INFO   RIBDaemon(pnode3): opcode is M_READ objClass is PubSub received from InPManagerIPC
+6465 INFO   RIBDaemon(pnode3)subscribe request received from  InPManagerIPC and it is for appStatus with frequency 7
+6465 WARN   RIBDaemon(pnode3): subscriber(InPManagerIPC) to  appStatus#7failed, the sub event does not exist
+7649 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+7649 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+7649 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+9650 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+9651 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+9651 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+11629 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_WRITE and src is InPManagerIPC and objclass is DIFMemberList, objName is DIFMemberList
+11630 INFO   IPC Process pnode3 of DIFDIF1: Current memberList is [InPManagerIPC, pnode1, pnode3, sp]
+11630 INFO   TCPFlowManager: flow allocated before.
+11630 INFO   IPC Process pnode3 of DIF DIF1: M_WRITE_R(OK) to NMS InPManagerIPC sent
+11631 INFO   IPC Process: new member has joined DIF DIF1 and the current member are [InPManagerIPC, pnode1, pnode3, sp]
+11652 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+11652 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+11652 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+12028 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_CREATE
+ src is pnode1
+ objclass is flow
+ objName is pnode1
+12028 INFO   IRM: CDAP opcode is  M_CREATE
+12029 INFO   IRM: objectClass is flow
+12029 INFO   IRM: objectName is pnode1
+12029 INFO   IRM: M_CREATE received
+12029 INFO   IRM(pnode3): M_CREATE(flow) received
+12030 DEBUG  FlowAllocatorImpl::resolveUpperDIFIPC: CDAP M_READ sent, appName is pnode1, NMS name is InPManagerIPC
+12031 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is resolveApp, objName is pnode1
+12031 INFO   IPC Process : M_READ_R(OK) received from  NMS. App   pnode1 is resloved to IPC pnode1 and well know port is  4019
+12032 INFO   Flow Allocator:M_CREATE_R(flow accepted) sent back,  flow accepted successful between srcIPC pnode3(portID:9630) and dstIPC pnode1(portID:291)
+12032 INFO   IRM: incoming flow created with handlID 4936,underlyingIPC ispnode3, portID is 9630
+12034 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_WRITE
+ src is pnode1
+ objclass is bid
+ objName is first bid
+12034 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjClass: bid
+12034 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjName:  first bid
+12034 INFO   ======= Pnode::handleAppCDAPmessage pnode3 SrcAEName: pnode1
+12061 INFO   Pnode::handleBidMessage: first Bid Message received by: pnode1
+12071 INFO   Iteration t = 1 for slice: 3185057
+12071 INFO   CADlog: pNode pnode3 BIDDING PHASE started  
+ for sliceName: sliceName_linearSlice 
+ slice topology: LINEAR 
+ slice id: 3185057
+12153 DEBUG  requested vNodeList : [vNodeId: 2
+vNodeCapacity: 10
+, vNodeId: 3
+vNodeCapacity: 10
+]
+12153 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded BEFORE (should be true): true
+12153 DEBUG  NodeBiddingImpl::nodeBidding:sliceRequested.getVirtualnodeCount(): 2
+12153 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12153 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 0
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: vnode: vNodeId: 2
+vNodeCapacity: 10
+tempCapacity: 10
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_nodeStressBeforeThisSliceRequest(): 0.01
+12154 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_targetNodeCapacity: 100.0
+12155 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: true
+12155 DEBUG  NodeBiddingImpl::nodeBidding: m BEFORE overbidAttempt: []
+12155 DEBUG  NodeBiddingImpl::overbidAttempt: START ======================
+12155 DEBUG  PnodeUtil::computeUtility: this.utility: residual_node_capacity
+12155 DEBUG  Pnode::computeUtility1: currentCapacity_S :0.01
+12155 DEBUG  Pnode::computeUtility1: vnodeCapacity :10.0
+12155 DEBUG  Pnode::computeUtility1: utility = (T - currentCapacity_S)/T  = 0.999000999000999
+12155 DEBUG  NodeBiddingImpl::overbidAttempt: trying to bid on vnode with id: 0
+12156 DEBUG  NodeBiddingImpl::overbidAttempt: b_ij: 0.0
+12156 DEBUG  hij: 0.999000999000999
+12156 DEBUG  NodeBiddingImpl::overbidAttempt END: bid is possible ======================
+12156 DEBUG  NodeBiddingImpl::nodeBidding: existsJ AFTER overbidAttempt : true
+12156 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING eta : -1
+12157 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING Uij : 4.9E-324
+12157 DEBUG  NodeBiddingImpl::computeEta: START ====================
+12157 DEBUG  NodeBiddingImpl::computeEta: m: []
+12157 DEBUG  NodeBiddingImpl::computeEta: m.size: 0
+12157 DEBUG  NodeBiddingImpl::computeEta: b: [0.0, 0.0]
+12157 DEBUG  NodeBiddingImpl::computeEta: b.size: 2
+12158 DEBUG  NodeBiddingImpl::computeEta: FINAL vNodesToExclude: []
+12158 DEBUG  Pnode::computeUtility1 with m: m is empty
+12158 DEBUG  Pnode::computeUtility1 targetCapacity_T  = 100.0
+12158 DEBUG  Pnode::computeUtility1 with m: utility = 0.8998999999999999
+12158 DEBUG  NodeBiddingImpl::computeEta: temp_Uij: 0.8998999999999999
+12158 DEBUG  Pnode::computeUtility1 with m: m is empty
+12158 DEBUG  Pnode::computeUtility1 targetCapacity_T  = 100.0
+12158 DEBUG  Pnode::computeUtility1 with m: utility = 0.8998999999999999
+12159 DEBUG  NodeBiddingImpl::computeEta: temp_Uij: 0.8998999999999999
+12159 INFO   NodeBiddingImpl::computeEta: pnode3 eta: 0 for sliceID: 3185057
+12159 INFO   NodeBiddingImpl::computeEta: pnode3 Uij: 0.8998999999999999 for sliceID: 3185057
+12159 DEBUG  NodeBiddingImpl::computeEta: END ====================
+12159 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING eta : 0
+12159 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING Uij : 0.8998999999999999
+12159 DEBUG  NodeBiddingImpl::nodeBidding: newRequestedVnodeCapacity = 10
+12159 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeCapacity()= 0.01
+12160 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeStressBeforeThisSliceRequest() = 10.01
+12160 DEBUG  NodeBiddingImpl::nodeBidding: m AFTER compute eta: [0]
+12160 DEBUG  NodeBiddingImpl::nodeBidding: _mMap AFTER compute eta: {3185057=[0]}
+12160 DEBUG  NodeBiddingImpl::nodeBidding: b AFTER compute eta: [0.8998999999999999, 0.0]
+12160 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap AFTER compute eta: {3185057=[0.8998999999999999, 0.0]}
+12160 DEBUG  NodeBiddingImpl::nodeBidding: a AFTER compute eta: {0=pnode3}
+12160 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap AFTER compute eta: {3185057={0=pnode3}}
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 1
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: vnode: vNodeId: 2
+vNodeCapacity: 10
+tempCapacity: 10
+12161 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_nodeStressBeforeThisSliceRequest(): 10.01
+12162 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_targetNodeCapacity: 100.0
+12162 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: true
+12162 DEBUG  NodeBiddingImpl::nodeBidding: m BEFORE overbidAttempt: [0]
+12162 DEBUG  NodeBiddingImpl::overbidAttempt: START ======================
+12162 DEBUG  PnodeUtil::computeUtility: this.utility: residual_node_capacity
+12162 DEBUG  Pnode::computeUtility1: currentCapacity_S :10.01
+12162 DEBUG  Pnode::computeUtility1: vnodeCapacity :10.0
+12162 DEBUG  Pnode::computeUtility1: utility = (T - currentCapacity_S)/T  = 0.4997501249375312
+12163 DEBUG  NodeBiddingImpl::overbidAttempt: trying to bid on vnode with id: 0
+12163 DEBUG  NodeBiddingImpl::overbidAttempt: b_ij: 0.8998999999999999
+12163 DEBUG  hij: 0.4997501249375312
+12163 DEBUG  PnodeUtil::computeUtility: this.utility: residual_node_capacity
+12163 DEBUG  Pnode::computeUtility1: currentCapacity_S :10.01
+12163 DEBUG  Pnode::computeUtility1: vnodeCapacity :10.0
+12163 DEBUG  Pnode::computeUtility1: utility = (T - currentCapacity_S)/T  = 0.4997501249375312
+12163 DEBUG  NodeBiddingImpl::overbidAttempt: trying to bid on vnode with id: 1
+12163 DEBUG  NodeBiddingImpl::overbidAttempt: b_ij: 0.0
+12164 DEBUG  hij: 0.4997501249375312
+12164 DEBUG  NodeBiddingImpl::overbidAttempt END: bid is possible ======================
+12164 DEBUG  NodeBiddingImpl::nodeBidding: existsJ AFTER overbidAttempt : true
+12164 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING eta : -1
+12164 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING Uij : 4.9E-324
+12164 DEBUG  NodeBiddingImpl::computeEta: START ====================
+12164 DEBUG  NodeBiddingImpl::computeEta: m: [0]
+12164 DEBUG  NodeBiddingImpl::computeEta: m.size: 1
+12165 DEBUG  NodeBiddingImpl::computeEta: b: [0.8998999999999999, 0.0]
+12165 DEBUG  NodeBiddingImpl::computeEta: b.size: 2
+12165 DEBUG  NodeBiddingImpl::computeEta: vnodeInBundle: 0
+12165 DEBUG  NodeBiddingImpl::computeEta: vNodesToExclude: [0]
+12165 DEBUG  NodeBiddingImpl::computeEta: FINAL vNodesToExclude: [0]
+12165 DEBUG  Pnode::computeUtility1 with m: m = [0]
+12165 DEBUG  Pnode::computeUtility1 targetCapacity_T  = 100.0
+12165 DEBUG  Pnode::computeUtility1 vnodeInBundle  = 0
+12166 DEBUG  Pnode::computeUtility1 tempCapacity  = 10
+12166 DEBUG  Pnode::computeUtility1 currentCapacity  = 10.0
+12166 DEBUG  Pnode::computeUtility1 with m: utility = 0.6999000000000001
+12166 DEBUG  NodeBiddingImpl::computeEta: temp_Uij: 0.6999000000000001
+12166 INFO   NodeBiddingImpl::computeEta: pnode3 eta: 1 for sliceID: 3185057
+12166 INFO   NodeBiddingImpl::computeEta: pnode3 Uij: 0.6999000000000001 for sliceID: 3185057
+12166 DEBUG  NodeBiddingImpl::computeEta: END ====================
+12166 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING eta : 1
+12167 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING Uij : 0.6999000000000001
+12167 DEBUG  NodeBiddingImpl::nodeBidding: newRequestedVnodeCapacity = 10
+12167 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeCapacity()= 0.01
+12167 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeStressBeforeThisSliceRequest() = 10.01
+12167 DEBUG  NodeBiddingImpl::nodeBidding: m AFTER compute eta: [0, 1]
+12167 DEBUG  NodeBiddingImpl::nodeBidding: _mMap AFTER compute eta: {3185057=[0, 1]}
+12167 DEBUG  NodeBiddingImpl::nodeBidding: b AFTER compute eta: [0.8998999999999999, 0.6999000000000001]
+12167 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap AFTER compute eta: {3185057=[0.8998999999999999, 0.6999000000000001]}
+12168 DEBUG  NodeBiddingImpl::nodeBidding: a AFTER compute eta: {0=pnode3, 1=pnode3}
+12168 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap AFTER compute eta: {3185057={0=pnode3, 1=pnode3}}
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 2
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 2
+12168 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 2
+12168 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: false
+12169 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded = false
+12169 DEBUG  NodeBiddingImpl::nodeBidding: get_allocationPolicy: sad
+12169 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap: {3185057={0=pnode3, 1=pnode3}}
+12169 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap: {3185057=[0.8998999999999999, 0.6999000000000001]}
+12169 DEBUG  NodeBiddingImpl::nodeBidding: _mMap: {3185057=[0, 1]}
+12169 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData  vinea.util.BiddingData@309cbd4b
+12170 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={0=pnode3, 1=pnode3}}
+12170 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {0=pnode3, 1=pnode3}
+12170 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData  vinea.util.BiddingData@24f9fdc
+12170 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={0=pnode3, 1=pnode3}}
+12170 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {0=pnode3, 1=pnode3}
+12170 DEBUG  NodeAgreement::nodeAgreement: received_sliceID: 3185057
+12171 DEBUG  NodeAgreement::nodeAgreement: received_allocationPolicy: sad
+12181 DEBUG  NodeAgreement::nodeAgreement: received_bidTime: [vNodeId: 0
+time: 1376404323975
+, vNodeId: 1
+time: 1376404323975
+]
+12182 DEBUG  NodeAgreement::nodeAgreement: received_assignment: [vNodeId: 0
+hostingPnodeName: "pnode1"
+, vNodeId: 1
+hostingPnodeName: "pnode1"
+]
+12182 DEBUG  NodeAgreement::extract_ak: assignmentsList : [vNodeId: 0
+hostingPnodeName: "pnode1"
+, vNodeId: 1
+hostingPnodeName: "pnode1"
+]
+12182 DEBUG  NodeAgreement::extract_ak: aIter : java.util.Collections$UnmodifiableCollection$1@8f0c85e
+12182 DEBUG  NodeAgreement::extract_ak: a_k : {0=pnode1, 1=pnode1}
+12183 DEBUG  NodeAgreement::nodeAgreement: a_k : {0=pnode1, 1=pnode1}
+12183 DEBUG  NodeAgreement::nodeAgreement: _currentBiddingData : vinea.util.BiddingData@24f9fdc
+12183 DEBUG  NodeAgreement::nodeAgreement: get_allocationVectorMap() : {3185057={0=pnode3, 1=pnode3}}
+12183 DEBUG  NodeAgreement::nodeAgreement: a_i : {0=pnode3, 1=pnode3}
+12183 DEBUG  NodeAgreement::nodeAgreement:: received_bids: [vNodeId: 0
+bidValue: 0.8998999999999999
+, vNodeId: 1
+bidValue: 0.6999000000000001
+]
+12183 DEBUG  NodeAgreement::extract_bk: received_bids : [vNodeId: 0
+bidValue: 0.8998999999999999
+, vNodeId: 1
+bidValue: 0.6999000000000001
+]
+12184 DEBUG  NodeAgreement::extract_bk: b_k : [0.8998999999999999, 0.6999000000000001]
+12184 DEBUG  NodeAgreement::nodeAgreement: receiver b_k : [0.8998999999999999, 0.6999000000000001]
+12184 DEBUG  NodeAgreement::nodeAgreement:: receiver b_i : [0.8998999999999999, 0.6999000000000001]
+12184 DEBUG  NodeAgreement::extract_tk: received_timeStamps : [vNodeId: 0
+time: 1376404323975
+, vNodeId: 1
+time: 1376404323975
+]
+12184 DEBUG  NodeAgreement::extract_tk: t_k : {0=1376404323975, 1=1376404323975}
+12185 DEBUG  NodeAgreement::nodeAgreement:: sender t_k : {0=1376404323975, 1=1376404323975}
+12185 DEBUG  NodeAgreement::nodeAgreement:: sender t_i : {}
+12185 DEBUG  NodeAgreement::nodeAgreement: received_m: [0, 1]
+12185 DEBUG  NodeAgreement::nodeAgreement: b_k.size(): 2
+12185 DEBUG  NodeAgreement::nodeAgreement: for loop: j: 0
+12185 DEBUG  NodeAgreement::nodeAgreement: a_kj : pnode1
+12185 DEBUG  NodeAgreement::nodeAgreement: a_ij : pnode3
+12186 DEBUG  NodeAgreement::nodeAgreement: b_kj : 0.8998999999999999
+12186 DEBUG  NodeAgreement::nodeAgreement: b_k : [0.8998999999999999, 0.6999000000000001]
+12186 DEBUG  NodeAgreement::nodeAgreement: b_ij : 0.8998999999999999
+12186 DEBUG  NodeAgreement::nodeAgreement: b_i : [0.8998999999999999, 0.6999000000000001]
+12186 DEBUG  NodeAgreement::nodeAgreement: t_kj  : 1376404323975
+12186 DEBUG  NodeAgreement::nodeAgreement: t_k  : {0=1376404323975, 1=1376404323975}
+12186 DEBUG  NodeAgreement::nodeAgreement: t_ij : -9223372036854775808
+12186 DEBUG  NodeAgreement::nodeAgreement: t_i : {}
+12187 DEBUG  NodeAgreement::nodeAgreement: conflict resolution rule 2
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: for vnode 0
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating a_i : {0=pnode3, 1=pnode3}
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating a_i : {1=pnode3, 0=pnode1}
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating b_i : [0.8998999999999999, 0.6999000000000001]
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating b_i : [0.8998999999999999, 0.6999000000000001]
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating t_i : {}
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating t_i : {0=1376404323975}
+12187 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating m_i : [0, 1]
+12188 DEBUG  NodeAgreement::releaseSubsequentVnodes: old bundle m_i : [0, 1]
+12188 DEBUG  NodeAgreement::releaseSubsequentVnodes: newBundle_m : []
+12190 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating m_i : []
+12190 DEBUG  NodeAgreement::nodeAgreement: for loop: j: 1
+12190 DEBUG  NodeAgreement::nodeAgreement: a_kj : pnode1
+12191 DEBUG  NodeAgreement::nodeAgreement: a_ij : pnode3
+12191 DEBUG  NodeAgreement::nodeAgreement: b_kj : 0.6999000000000001
+12191 DEBUG  NodeAgreement::nodeAgreement: b_k : [0.8998999999999999, 0.6999000000000001]
+12191 DEBUG  NodeAgreement::nodeAgreement: b_ij : 0.6999000000000001
+12191 DEBUG  NodeAgreement::nodeAgreement: b_i : [0.8998999999999999, 0.6999000000000001]
+12191 DEBUG  NodeAgreement::nodeAgreement: t_kj  : 1376404323975
+12191 DEBUG  NodeAgreement::nodeAgreement: t_k  : {0=1376404323975, 1=1376404323975}
+12191 DEBUG  NodeAgreement::nodeAgreement: t_ij : -9223372036854775808
+12192 DEBUG  NodeAgreement::nodeAgreement: t_i : {0=1376404323975}
+12192 DEBUG  NodeAgreement::nodeAgreement: conflict resolution rule 2
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: for vnode 1
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating a_i : {1=pnode3, 0=pnode1}
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating a_i : {0=pnode1, 1=pnode1}
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating b_i : [0.8998999999999999, 0.6999000000000001]
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating b_i : [0.8998999999999999, 0.6999000000000001]
+12192 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating t_i : {0=1376404323975}
+12193 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating t_i : {0=1376404323975, 1=1376404323975}
+12193 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating m_i : []
+12193 DEBUG  NodeAgreement::releaseSubsequentVnodes: old bundle m_i : []
+12193 DEBUG  NodeAgreement::releaseSubsequentVnodes: newBundle_m : []
+12193 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating m_i : []
+12193 INFO   ================================================
+12193 INFO   ================================================
+12193 INFO   ======= FIRST AGREEMENT PHASE COMPLETE =========
+12193 INFO   ================================================
+12194 INFO   ================================================
+12194 INFO   Pnode::handleFirstBidMessage:: rebroadcast message?: true
+12194 INFO   Pnode::handleFirstBidMessage: neighborList BEFORE REMOVING: [InPManagerIPC, pnode1, pnode3, sp]
+12194 INFO   Pnode::handleFirstBidMessage: neighborList AFTER REMOVING: [InPManagerIPC, pnode1, sp]
+12195 DEBUG  ==================== inside sendBIDMessage: cadMessageToBroadcast =============================
+12195 DEBUG  Pnode::sendBIDMessage: neighborList: [InPManagerIPC, pnode1, sp]
+12196 DEBUG  Pnode::sendBIDMessage: dstName = InPManagerIPC
+12196 DEBUG  Pnode::sendBIDMessage: not sending anything to: InPManagerIPC
+12196 DEBUG  Pnode::sendBIDMessage: dstName = pnode1
+12196 DEBUG  Pnode::sendCADMessage: handle for flow with pnode1 is :4936
+12196 DEBUG  Pnode::sendCADMessage: getHandle for flow with pnode1 is :4936
+12196 DEBUG  Pnode::sendBIDMessage: handle for flow with pnode1 is :4936
+12197 DEBUG  Msg was sent out by IRM to destName: pnode1
+12197 DEBUG  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+12197 DEBUG  Pnode::sendBIDMessage: CDAP message with BID payload sent to pnode1
+12197 DEBUG  Pnode::sendBIDMessage: dstName = sp
+12197 DEBUG  Pnode::sendBIDMessage: not sending anything to: sp
+12197 DEBUG  ==================== bid message rebroadcasted =============================
+12337 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_CREATE
+ src is pnode1
+ objclass is flow
+ objName is pnode1
+12337 INFO   IRM: CDAP opcode is  M_CREATE
+12337 INFO   IRM: objectClass is flow
+12337 INFO   IRM: objectName is pnode1
+12337 INFO   IRM: M_CREATE received
+12337 INFO   IRM(pnode3): M_CREATE(flow) received
+12338 DEBUG  FlowAllocatorImpl::resolveUpperDIFIPC: CDAP M_READ sent, appName is pnode1, NMS name is InPManagerIPC
+12338 INFO   Flow Allocator:M_CREATE_R(flow accepted) sent back,  flow accepted successful between srcIPC pnode3(portID:2066) and dstIPC pnode1(portID:5678)
+12339 INFO   IRM: incoming flow created with handlID 1707,underlyingIPC ispnode3, portID is 2066
+12359 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is resolveApp, objName is pnode1
+12359 INFO   IPC Process : M_READ_R(OK) received from  NMS. App   pnode1 is resloved to IPC pnode1 and well know port is  4019
+12362 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_WRITE
+ src is pnode1
+ objclass is bid
+ objName is first bid
+12363 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjClass: bid
+12363 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjName:  first bid
+12363 INFO   ======= Pnode::handleAppCDAPmessage pnode3 SrcAEName: pnode1
+12363 INFO   Pnode::handleBidMessage: first Bid Message received by: pnode1
+12363 INFO   Iteration t = 2 for slice: 3185057
+12364 INFO   CADlog: pNode pnode3 BIDDING PHASE started  
+ for sliceName: sliceName_linearSlice 
+ slice topology: LINEAR 
+ slice id: 3185057
+12364 DEBUG  requested vNodeList : [vNodeId: 3
+vNodeCapacity: 10
+]
+12364 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded BEFORE (should be true): true
+12364 DEBUG  NodeBiddingImpl::nodeBidding:sliceRequested.getVirtualnodeCount(): 1
+12364 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 1
+12364 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12364 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 1
+12364 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 1
+12365 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 0
+12365 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 1
+12365 DEBUG  NodeBiddingImpl::biddingIsNeeded: vnode: vNodeId: 3
+vNodeCapacity: 10
+tempCapacity: 10
+12365 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_nodeStressBeforeThisSliceRequest(): 0.01
+12365 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_targetNodeCapacity: 100.0
+12365 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: true
+12365 DEBUG  NodeBiddingImpl::nodeBidding: m BEFORE overbidAttempt: []
+12365 DEBUG  NodeBiddingImpl::overbidAttempt: START ======================
+12365 DEBUG  PnodeUtil::computeUtility: this.utility: residual_node_capacity
+12366 DEBUG  Pnode::computeUtility1: currentCapacity_S :0.01
+12366 DEBUG  Pnode::computeUtility1: vnodeCapacity :10.0
+12366 DEBUG  Pnode::computeUtility1: utility = (T - currentCapacity_S)/T  = 0.999000999000999
+12366 DEBUG  NodeBiddingImpl::overbidAttempt: trying to bid on vnode with id: 0
+12366 DEBUG  NodeBiddingImpl::overbidAttempt: b_ij: 0.0
+12366 DEBUG  hij: 0.999000999000999
+12366 DEBUG  NodeBiddingImpl::overbidAttempt END: bid is possible ======================
+12366 DEBUG  NodeBiddingImpl::nodeBidding: existsJ AFTER overbidAttempt : true
+12366 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING eta : -1
+12367 DEBUG  NodeBiddingImpl::nodeBidding: BEFORE BIDDING Uij : 4.9E-324
+12367 DEBUG  NodeBiddingImpl::computeEta: START ====================
+12367 DEBUG  NodeBiddingImpl::computeEta: m: []
+12367 DEBUG  NodeBiddingImpl::computeEta: m.size: 0
+12367 DEBUG  NodeBiddingImpl::computeEta: b: [0.0]
+12367 DEBUG  NodeBiddingImpl::computeEta: b.size: 1
+12367 DEBUG  NodeBiddingImpl::computeEta: FINAL vNodesToExclude: []
+12367 DEBUG  Pnode::computeUtility1 with m: m is empty
+12367 DEBUG  Pnode::computeUtility1 targetCapacity_T  = 100.0
+12368 DEBUG  Pnode::computeUtility1 with m: utility = 0.8998999999999999
+12368 DEBUG  NodeBiddingImpl::computeEta: temp_Uij: 0.8998999999999999
+12368 INFO   NodeBiddingImpl::computeEta: pnode3 eta: 0 for sliceID: 3185057
+12368 INFO   NodeBiddingImpl::computeEta: pnode3 Uij: 0.8998999999999999 for sliceID: 3185057
+12368 DEBUG  NodeBiddingImpl::computeEta: END ====================
+12368 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING eta : 0
+12368 DEBUG  NodeBiddingImpl::nodeBidding: AFTER BIDDING Uij : 0.8998999999999999
+12368 DEBUG  NodeBiddingImpl::nodeBidding: newRequestedVnodeCapacity = 10
+12369 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeCapacity()= 0.01
+12369 DEBUG  NodeBiddingImpl::nodeBidding: get_nodeStressBeforeThisSliceRequest() = 10.01
+12369 DEBUG  NodeBiddingImpl::nodeBidding: m AFTER compute eta: [0]
+12369 DEBUG  NodeBiddingImpl::nodeBidding: _mMap AFTER compute eta: {3185057=[0]}
+12369 DEBUG  NodeBiddingImpl::nodeBidding: b AFTER compute eta: [0.8998999999999999]
+12369 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap AFTER compute eta: {3185057=[0.8998999999999999]}
+12369 DEBUG  NodeBiddingImpl::nodeBidding: a AFTER compute eta: {0=pnode3}
+12369 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap AFTER compute eta: {3185057={0=pnode3}}
+12369 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 1
+12370 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12370 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 1
+12370 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 1
+12370 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 1
+12370 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 1
+12370 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: false
+12370 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded = false
+12370 DEBUG  NodeBiddingImpl::nodeBidding: get_allocationPolicy: sad
+12370 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap: {3185057={0=pnode3}}
+12371 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap: {3185057=[0.8998999999999999]}
+12371 DEBUG  NodeBiddingImpl::nodeBidding: _mMap: {3185057=[0]}
+12371 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData  vinea.util.BiddingData@42552c
+12371 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={0=pnode3}}
+12371 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {0=pnode3}
+12371 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData  vinea.util.BiddingData@2e5bbd6
+12371 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={0=pnode3}}
+12371 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {0=pnode3}
+12374 DEBUG  NodeAgreement::nodeAgreement: received_sliceID: 3185057
+12374 DEBUG  NodeAgreement::nodeAgreement: received_allocationPolicy: sad
+12374 DEBUG  NodeAgreement::nodeAgreement: received_bidTime: [vNodeId: 0
+time: 1376404324287
+]
+12374 DEBUG  NodeAgreement::nodeAgreement: received_assignment: [vNodeId: 0
+hostingPnodeName: "pnode1"
+]
+12374 DEBUG  NodeAgreement::extract_ak: assignmentsList : [vNodeId: 0
+hostingPnodeName: "pnode1"
+]
+12375 DEBUG  NodeAgreement::extract_ak: aIter : java.util.Collections$UnmodifiableCollection$1@388ee016
+12375 DEBUG  NodeAgreement::extract_ak: a_k : {0=pnode1}
+12379 DEBUG  NodeAgreement::nodeAgreement: a_k : {0=pnode1}
+12379 DEBUG  NodeAgreement::nodeAgreement: _currentBiddingData : vinea.util.BiddingData@2e5bbd6
+12379 DEBUG  NodeAgreement::nodeAgreement: get_allocationVectorMap() : {3185057={0=pnode3}}
+12379 DEBUG  NodeAgreement::nodeAgreement: a_i : {0=pnode3}
+12379 DEBUG  NodeAgreement::nodeAgreement:: received_bids: [vNodeId: 0
+bidValue: 0.8998999999999999
+]
+12380 DEBUG  NodeAgreement::extract_bk: received_bids : [vNodeId: 0
+bidValue: 0.8998999999999999
+]
+12380 DEBUG  NodeAgreement::extract_bk: b_k : [0.8998999999999999]
+12380 DEBUG  NodeAgreement::nodeAgreement: receiver b_k : [0.8998999999999999]
+12380 DEBUG  NodeAgreement::nodeAgreement:: receiver b_i : [0.8998999999999999]
+12380 DEBUG  NodeAgreement::extract_tk: received_timeStamps : [vNodeId: 0
+time: 1376404324287
+]
+12380 DEBUG  NodeAgreement::extract_tk: t_k : {0=1376404324287}
+12380 DEBUG  NodeAgreement::nodeAgreement:: sender t_k : {0=1376404324287}
+12381 DEBUG  NodeAgreement::nodeAgreement:: sender t_i : {}
+12381 DEBUG  NodeAgreement::nodeAgreement: received_m: [0]
+12382 DEBUG  NodeAgreement::nodeAgreement: b_k.size(): 1
+12382 DEBUG  NodeAgreement::nodeAgreement: for loop: j: 0
+12382 DEBUG  NodeAgreement::nodeAgreement: a_kj : pnode1
+12382 DEBUG  NodeAgreement::nodeAgreement: a_ij : pnode3
+12382 DEBUG  NodeAgreement::nodeAgreement: b_kj : 0.8998999999999999
+12382 DEBUG  NodeAgreement::nodeAgreement: b_k : [0.8998999999999999]
+12382 DEBUG  NodeAgreement::nodeAgreement: b_ij : 0.8998999999999999
+12383 DEBUG  NodeAgreement::nodeAgreement: b_i : [0.8998999999999999]
+12383 DEBUG  NodeAgreement::nodeAgreement: t_kj  : 1376404324287
+12383 DEBUG  NodeAgreement::nodeAgreement: t_k  : {0=1376404324287}
+12383 DEBUG  NodeAgreement::nodeAgreement: t_ij : -9223372036854775808
+12383 DEBUG  NodeAgreement::nodeAgreement: t_i : {}
+12383 DEBUG  NodeAgreement::nodeAgreement: conflict resolution rule 2
+12383 DEBUG  NodeAgreement::updateAndRebroadcast: for vnode 0
+12383 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating a_i : {0=pnode3}
+12383 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating a_i : {0=pnode1}
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating b_i : [0.8998999999999999]
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating b_i : [0.8998999999999999]
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating t_i : {}
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating t_i : {0=1376404324287}
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: BEFORE updating m_i : [0]
+12384 DEBUG  NodeAgreement::releaseSubsequentVnodes: old bundle m_i : [0]
+12384 DEBUG  NodeAgreement::releaseSubsequentVnodes: newBundle_m : []
+12384 DEBUG  NodeAgreement::updateAndRebroadcast: AFTER updating m_i : []
+12384 INFO   ================================================
+12384 INFO   ================================================
+12385 INFO   ======= FIRST AGREEMENT PHASE COMPLETE =========
+12385 INFO   ================================================
+12385 INFO   ================================================
+12385 INFO   Pnode::handleFirstBidMessage:: rebroadcast message?: true
+12385 INFO   Pnode::handleFirstBidMessage: neighborList BEFORE REMOVING: [InPManagerIPC, pnode1, sp]
+12385 INFO   Pnode::handleFirstBidMessage: neighborList AFTER REMOVING: [InPManagerIPC, pnode1, sp]
+12385 DEBUG  ==================== inside sendBIDMessage: cadMessageToBroadcast =============================
+12385 DEBUG  Pnode::sendBIDMessage: neighborList: [InPManagerIPC, pnode1, sp]
+12386 DEBUG  Pnode::sendBIDMessage: dstName = InPManagerIPC
+12386 DEBUG  Pnode::sendBIDMessage: not sending anything to: InPManagerIPC
+12386 DEBUG  Pnode::sendBIDMessage: dstName = pnode1
+12386 DEBUG  Pnode::sendCADMessage: handle for flow with pnode1 is :4936
+12386 DEBUG  Pnode::sendCADMessage: getHandle for flow with pnode1 is :4936
+12386 DEBUG  Pnode::sendBIDMessage: handle for flow with pnode1 is :4936
+12387 DEBUG  Msg was sent out by IRM to destName: pnode1
+12387 DEBUG  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+12387 DEBUG  Pnode::sendBIDMessage: CDAP message with BID payload sent to pnode1
+12387 DEBUG  Pnode::sendBIDMessage: dstName = sp
+12387 DEBUG  Pnode::sendBIDMessage: not sending anything to: sp
+12387 DEBUG  ==================== bid message rebroadcasted =============================
+12425 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_CREATE
+ src is pnode1
+ objclass is flow
+ objName is pnode1
+12425 INFO   IRM: CDAP opcode is  M_CREATE
+12425 INFO   IRM: objectClass is flow
+12425 INFO   IRM: objectName is pnode1
+12425 INFO   IRM: M_CREATE received
+12425 INFO   IRM(pnode3): M_CREATE(flow) received
+12426 DEBUG  FlowAllocatorImpl::resolveUpperDIFIPC: CDAP M_READ sent, appName is pnode1, NMS name is InPManagerIPC
+12426 INFO   Flow Allocator:M_CREATE_R(flow accepted) sent back,  flow accepted successful between srcIPC pnode3(portID:2946) and dstIPC pnode1(portID:1593)
+12426 INFO   IRM: incoming flow created with handlID 3246,underlyingIPC ispnode3, portID is 2946
+12428 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is resolveApp, objName is pnode1
+12428 INFO   IPC Process : M_READ_R(OK) received from  NMS. App   pnode1 is resloved to IPC pnode1 and well know port is  4019
+12428 INFO   Application Process(pnode3): cdapMessage received, 
+ opcode is M_WRITE
+ src is pnode1
+ objclass is bid
+ objName is first bid
+12429 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjClass: bid
+12429 INFO   ======= Pnode::handleAppCDAPmessage pnode3 ObjName:  first bid
+12429 INFO   ======= Pnode::handleAppCDAPmessage pnode3 SrcAEName: pnode1
+12429 INFO   Pnode::handleBidMessage: first Bid Message received by: pnode1
+12429 INFO   Iteration t = 3 for slice: 3185057
+12429 INFO   CADlog: pNode pnode3 BIDDING PHASE started  
+ for sliceName: sliceName_linearSlice 
+ slice topology: LINEAR 
+ slice id: 3185057
+12430 DEBUG  requested vNodeList : []
+12430 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded BEFORE (should be true): true
+12430 DEBUG  NodeBiddingImpl::nodeBidding:sliceRequested.getVirtualnodeCount(): 0
+12430 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 0
+12430 DEBUG  NodeBiddingImpl::biddingIsNeeded: get_allocationPolicy(): sad
+12430 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 0
+12430 DEBUG  NodeBiddingImpl::biddingIsNeeded: _bidVectorMap.get(sliceID).size(): 0
+12432 DEBUG  NodeBiddingImpl::biddingIsNeeded: currentBids: 0
+12432 DEBUG  NodeBiddingImpl::biddingIsNeeded: sliceRequested.getVirtualnodeList().size(): 0
+12432 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded AFTER: false
+12432 DEBUG  NodeBiddingImpl::nodeBidding: bidisNeeded = false
+12432 DEBUG  NodeBiddingImpl::nodeBidding: get_allocationPolicy: sad
+12432 DEBUG  NodeBiddingImpl::nodeBidding: _allocationVectorMap: {3185057={}}
+12432 DEBUG  NodeBiddingImpl::nodeBidding: _bidVectorMap: {3185057=[]}
+12432 DEBUG  NodeBiddingImpl::nodeBidding: _mMap: {3185057=[]}
+12432 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData  vinea.util.BiddingData@625dcec6
+12433 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={}}
+12433 DEBUG  Pnode::handleFirstBidMessage: BEFORE updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {}
+12433 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData  vinea.util.BiddingData@7cb25b9d
+12433 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVectorMap() {3185057={}}
+12433 DEBUG  Pnode::handleFirstBidMessage: AFTER updateBiddingData _currentBiddingData.get_allocationVector(sliceID)  {}
+12433 DEBUG  NodeAgreement::nodeAgreement: received_sliceID: 3185057
+12433 DEBUG  NodeAgreement::nodeAgreement: received_allocationPolicy: sad
+12433 DEBUG  NodeAgreement::nodeAgreement: received_bidTime: []
+12433 DEBUG  NodeAgreement::nodeAgreement: received_assignment: []
+12433 DEBUG  NodeAgreement::extract_ak: assignmentsList : []
+12434 DEBUG  NodeAgreement::extract_ak: aIter : java.util.AbstractList$Itr@219ce060
+12434 DEBUG  NodeAgreement::extract_ak: a_k : {}
+12434 DEBUG  NodeAgreement::nodeAgreement: a_k : {}
+12434 DEBUG  NodeAgreement::nodeAgreement: _currentBiddingData : vinea.util.BiddingData@7cb25b9d
+12434 DEBUG  NodeAgreement::nodeAgreement: get_allocationVectorMap() : {3185057={}}
+12434 DEBUG  NodeAgreement::nodeAgreement: a_i : {}
+12434 DEBUG  NodeAgreement::nodeAgreement:: received_bids: []
+12434 DEBUG  NodeAgreement::extract_bk: received_bids : []
+12434 DEBUG  NodeAgreement::extract_bk: b_k : []
+12435 DEBUG  NodeAgreement::nodeAgreement: receiver b_k : []
+12435 DEBUG  NodeAgreement::nodeAgreement:: receiver b_i : []
+12435 DEBUG  NodeAgreement::extract_tk: received_timeStamps : []
+12435 DEBUG  NodeAgreement::extract_tk: t_k : {}
+12435 DEBUG  NodeAgreement::nodeAgreement:: sender t_k : {}
+12435 DEBUG  NodeAgreement::nodeAgreement:: sender t_i : {}
+12435 DEBUG  NodeAgreement::nodeAgreement: received_m: []
+12435 DEBUG  NodeAgreement::nodeAgreement: b_k.size(): 0
+12435 INFO   ================================================
+12435 INFO   ================================================
+12436 INFO   ======= FIRST AGREEMENT PHASE COMPLETE =========
+12436 INFO   ================================================
+12436 INFO   ================================================
+12436 INFO   Pnode::handleFirstBidMessage:: rebroadcast message?: false
+12436 INFO   Pnode::handleFirstBidMessage: AGREEMENT: No need to send anything back 
+12436 INFO   Pnode::handleFirstBidMessage: sending Response To SP...
+12436 DEBUG  Pnode::sendResponseToSP: type: 1
+12436 DEBUG  Pnode::sendResponseToSP: sliceID: 3185057
+12436 DEBUG  Pnode::sendResponseToSP: get_allocationPolicy(): sad
+12436 DEBUG  Pnode::sendResponseToSP: _allocationVectorMap.get(sliceID): {}
+12437 DEBUG  Pnode::sendResponseToSP: this._bidVectorMap.get(sliceID): []
+12437 DEBUG  Pnode::sendResponseToSP: preparing message for SP: sp
+12437 DEBUG  Pnode::sendResponseToSP: handle for flow with sp is :-1
+12437 DEBUG  FlowAllocatorImpl::resolveUpperDIFIPC: CDAP M_READ sent, appName is sp, NMS name is InPManagerIPC
+12439 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is resolveApp, objName is sp
+12439 INFO   IPC Process : M_READ_R(OK) received from  NMS. App   sp is resloved to IPC sp and well know port is  9430
+12439 INFO   IRM: allocate flow using the existing underlying DIF with ipc is pnode3
+12439 INFO   Flow Allocator(pnode3): for app spunderlyingDstIPCName is sp wellknownPort is 9430
+12440 INFO   Flow Allocator: portID is 6760
+12440 DEBUG  DTP message sent on first level flow ----
+12440 INFO   Flow Allocator: M_CREATE(flow) msg sent to  sp
+12446 INFO   Flow Allocator: flow allocated successful  between srcIPC pnode3(portID:6760) and dstIPC sp(portID:5667)
+12446 DEBUG  Pnode::sendResponseToSP: getHandle for flow with sp is :7291
+12446 DEBUG  Pnode::sendResponseToSP: handle for flow with sp is :-1
+12446 DEBUG  Pnode::sendResponseToSP: sent to: sp
+12447 DEBUG  Msg was sent out by IRM to destName: sp
+12447 DEBUG  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+12447 DEBUG  Pnode::sendResponseToSP: CDAP message with POSITIVE RESPONSE sent to sp
+13656 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+13656 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+13656 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+15659 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+15659 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+15660 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+17662 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+17663 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+17663 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+19666 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+19666 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+19666 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+21668 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+21668 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+21669 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
+23671 INFO   IPCProcess(pnode3): cdapMessage received, and opcode is M_READ_R and src is InPManagerIPC and objclass is PubSub, objName is InPManagerIPC
+23672 INFO   RIBDaemon(pnode3): opcode is M_READ_R objClass is PubSub received from InPManagerIPC
+23672 INFO   RIBDaemon(pnode3): appsReachable(freq: 2)M_READ_R received
