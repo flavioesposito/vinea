@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Personnel>
-    <Employee type="permanent">
-        <Name>Seagull</Name>
+<Slice>
+    <VirtualNode type="mandatory">
+        <Name>vn1</Name>
         <Id>3674</Id>
-        <Age>34</Age>
-    </Employee>
-    <Employee type="contract">
-        <Name>Robin</Name>
+        <cpu>34</cpu>
+    </VirtualNode>
+    <VirtualNode type="mandatory">
+        <Name>vn2</Name>
         <Id>3675</Id>
-        <Age>25</Age>
-    </Employee>
-    <Employee type="permanent">
-        <Name>Crow</Name>
-        <Id>3676</Id>
-        <Age>28</Age>
-    </Employee>
-</Personnel>
+        <cpu>99</cpu>
+    </VirtualNode>
+    <VirtualLink type="mandatory">
+        <Name>vl1</Name>
+        <Id>3675</Id>
+        <bw>25</bw>
+        <delay>00</delay>
+    </VirtualLink>
+    <Topology type="optional">
+        <Name>star</Name>
+    </Topology>
+</Slice>
