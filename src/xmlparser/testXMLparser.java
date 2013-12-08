@@ -6,6 +6,7 @@ package xmlparser;
 /**
  * @author flavioesposito
  * @brief TODO: support use of XML instead of Google Protocol Buffer 
+ * @deprecated
  */
 public class testXMLparser {
 
